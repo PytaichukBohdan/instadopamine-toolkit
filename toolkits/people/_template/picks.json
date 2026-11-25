@@ -1,0 +1,9 @@
+{
+ "notes": "Fill after looking at the contact sheets from prep_refs.py convert/frames. Boxes are fractions x0,y0,x1,y1; t is seconds.",
+ "crops": [
+  {"id": "face_front", "src": "IMG_0001.HEIC", "box": [0.12, 0.10, 0.88, 0.70], "max": 1024}
+ ],
+ "boards": [
+  {"id": "face_angles", "tiles": ["face_34_right", "face_34_left", "face_profile_right", "face_profile_left", "face_back34", "face_front"], "cols": 3, "cell": 560}
+ ]
+}

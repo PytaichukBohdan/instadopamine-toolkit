@@ -1,0 +1,4 @@
+interface:
+  display_name: "Person Passport"
+  short_description: "Dated visual assets and original phrase evidence"
+  default_prompt: "Use $person-passport to analyze this person and build a dated visual and spoken-phrase passport."

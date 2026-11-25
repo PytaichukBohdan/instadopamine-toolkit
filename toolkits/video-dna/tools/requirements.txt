@@ -1,0 +1,4 @@
+# Python deps for video-dna/tools (install into /mnt/data/video-dna-venv with uv; see README)
+pyyaml>=6
+higgsfield-client>=0.2,<0.3
+python-dotenv>=1.0

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>{{NAME}} — Digital Passport {{VERSION}}</title>
+<style>
+  :root {
+    --bg: #ecebe8; --paper: #f7f6f3; --ink: #1d1c1a; --muted: #5f5c57; --line: #d6d3cd; --accent: #8a3b2e;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  header.top { position: sticky; top: 0; z-index: 5; background: color-mix(in oklab, var(--bg) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  header.top .in { max-width: 1180px; margin: 0 auto; padding: 10px 20px; display: flex; gap: 18px; align-items: baseline; flex-wrap: wrap; }
+  header.top b { letter-spacing: .02em; }
+  header.top nav { display: flex; gap: 14px; flex-wrap: wrap; font-size: 14px; }
+  header.top nav a { color: var(--muted); text-decoration: none; }
+  header.top nav a:hover { color: var(--ink); }
+  main { max-width: 1180px; margin: 0 auto; padding: 24px 20px 64px; }
+  .hero { display: grid; grid-template-columns: minmax(240px, 380px) 1fr; gap: 32px; align-items: start; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 24px; }
+  .hero img { width: 100%; height: auto; border-radius: 8px; display: block; }
+  .kicker { text-transform: uppercase; letter-spacing: .12em; font-size: 12px; color: var(--muted); margin: 0 0 6px; }
+  h1 { font-size: clamp(28px, 4vw, 42px); line-height: 1.1; margin: 0 0 8px; text-wrap: balance; }
+  .hero p.sum { color: var(--muted); margin: 0 0 18px; max-width: 62ch; }
+  dl.spec { margin: 0; display: grid; gap: 8px; }
+  .spec-row { display: grid; grid-template-columns: 150px 1fr; gap: 12px; padding-top: 8px; border-top: 1px solid var(--line); font-size: 14px; }
+  .spec-row dt { font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); padding-top: 2px; }
+  .spec-row dd { margin: 0; }
+  .stats { display: flex; gap: 22px; flex-wrap: wrap; margin: 0 0 18px; font-size: 14px; }
+  .stats span b { font-size: 22px; display: block; font-variant-numeric: tabular-nums; }
+  section { margin-top: 44px; scroll-margin-top: 64px; }
+  h2 { font-size: 24px; margin: 0 0 4px; }
+  p.lede { color: var(--muted); margin: 0 0 16px; max-width: 75ch; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 18px; }
+  .card { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+  .card.wide { grid-column: 1 / -1; }
+  .card .shot { display: block; background: #dcdad6; }
+  .card img { width: 100%; height: auto; display: block; }
+  .card .meta { padding: 14px 16px 16px; }
+  .card h3 { margin: 0 0 6px; font-size: 17px; }
+  .card p.use { margin: 0 0 8px; font-size: 14px; }
+  ul.notes { margin: 0 0 10px; padding-left: 18px; font-size: 13.5px; color: var(--muted); }
+  ul.notes li { margin: 2px 0; }
+  p.small { font-size: 13px; margin: 0; color: var(--muted); }
+  .panel { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px; }
+  .panel ul { margin: 0; padding-left: 18px; }
+  .panel li { margin: 6px 0; max-width: 90ch; }
+  .label { display: inline-block; font-size: 12px; border: 1px solid var(--line); border-radius: 999px; padding: 2px 10px; color: var(--muted); background: var(--bg); }
+  footer { color: var(--muted); font-size: 13px; margin-top: 48px; }
+  @media (max-width: 760px) {
+    .hero { grid-template-columns: 1fr; padding: 16px; }
+    .spec-row { grid-template-columns: 1fr; gap: 2px; }
+    .grid { grid-template-columns: 1fr; }
+    header.top nav { flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; width: 100%; padding-bottom: 2px; }
+  }
+</style>
+</head>
+<body>
+<header class="top"><div class="in"><b>{{NAME}} · Digital Passport {{VERSION}}</b><nav>{{NAV}}<a href="#spec">Spec</a><a href="#method">Method</a></nav></div></header>
+<main>
+  <div class="hero">
+    <a href="{{HERO_FULL}}"><img src="{{HERO_IMG}}" alt="Strict frontal passport portrait of {{NAME}}, AI-generated from reference photos"></a>
+    <div>
+      <p class="kicker">Visual identity passport · {{DATE}}</p>
+      <h1>{{NAME}}</h1>
+      <p class="sum">{{SUMMARY}} <span class="label">AI-generated likeness, not photographs</span></p>
+      <div class="stats"><span><b>{{COUNT}}</b>selected assets</span><span><b>{{TOTAL}}</b>images generated</span><span><b>gpt-image</b>Codex built-in tool</span></div>
+      <dl class="spec" id="spec">{{SPEC}}</dl>
+    </div>
+  </div>
+  {{SECTIONS}}
+  <section id="pending">
+    <h2>Waiting on you</h2>
+    <div class="panel"><ul>{{PENDING}}</ul></div>
+  </section>
+  <section id="method">
+    <h2>How it was made</h2>
+    <div class="panel"><ul>{{METHOD}}</ul></div>
+  </section>
+  <section id="limits">
+    <h2>Known limits</h2>
+    <div class="panel"><ul>{{LIMITS}}</ul></div>
+  </section>
+  <footer>Private review page, excluded from search engines. Reference photos and videos are not published here; only the generated images and prompts are.</footer>
+</main>
+</body>
+</html>

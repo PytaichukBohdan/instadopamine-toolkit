@@ -1,0 +1,6 @@
+{
+  "name": "video-dna-tools",
+  "private": true,
+  "type": "module",
+  "dependencies": { "yjs": "^13.6.0" }
+}

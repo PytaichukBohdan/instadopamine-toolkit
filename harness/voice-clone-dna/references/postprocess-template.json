@@ -1,0 +1,32 @@
+{
+  "source_sha256": null,
+  "target_lufs": -19,
+  "presets": {
+    "clean": {
+      "equalizer": "highpass=f=55:p=2,equalizer=f=3100:t=q:w=1.1:g=-1.5",
+      "deesser": {
+        "detector_hz": 4200,
+        "fraction_threshold": 0.12,
+        "ratio": 2.5,
+        "max_cut_db": 3.5,
+        "attack_ms": 3,
+        "release_ms": 65,
+        "shelf_start_hz": 3500,
+        "shelf_full_hz": 5300
+      }
+    },
+    "soft": {
+      "equalizer": "highpass=f=55:p=2,equalizer=f=3100:t=q:w=1:g=-2.2,highshelf=f=5800:g=-0.6",
+      "deesser": {
+        "detector_hz": 4000,
+        "fraction_threshold": 0.09,
+        "ratio": 3,
+        "max_cut_db": 5,
+        "attack_ms": 3,
+        "release_ms": 80,
+        "shelf_start_hz": 3300,
+        "shelf_full_hz": 5200
+      }
+    }
+  }
+}

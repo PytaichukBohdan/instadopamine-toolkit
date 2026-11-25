@@ -1,0 +1,16 @@
+{
+  "schema": "instadna.voice-skill/v1",
+  "files": {
+    "SKILL.md": "cfd6d924c608d641d9b6a3bf8ba1d376fed002ffde927ae0138161fd3f07406a",
+    "agents/openai.yaml": "3e0f51371b63b6cd82f7a57a0b110fe4000a6582d9da6035c536434439bb17e4",
+    "references/approved-case.md": "ef44e209239a000a541c26aa2c9c29696ee807f947dae8a721060e02966c1349",
+    "references/postprocess-template.json": "e53945e7be423f5cf93e4a1c350735c7dbe80e54c2828670dbf0c22ef10fd540",
+    "references/production.md": "c8ff17043d1c9406b1c60620c553360377a28357798d8ffafabaaa63bd220d8d",
+    "scripts/instadna/__init__.py": "f2a7ae416c2647a89fed2c8ad0b0afe3c6c87e8c844c51fe546d904ba271c51f",
+    "scripts/instadna/pronunciation.py": "a6791836c9aa373e6d609d8fd9f9777f403dba071ad76431ed4aa820c67cb48e",
+    "scripts/mix_reel.py": "39e35097ab4a281ec87bb0fd8474e61f64a527ab589afcf261ce023347f25510",
+    "scripts/postprocess_voice.py": "998a1568564ba49dd6c4b3695626f68ad75784572c5f69f1eeb8f1b2992ea914",
+    "scripts/synthesize_elevenlabs.py": "4b9eae76257e082dc2469e6ecaf857a00211632239fefa7acf31a0842a3603d3",
+    "scripts/transfer_prosody.py": "e487ec08dbfe562022c468e9219a7f2875ffd10ee1023fd0ba6119f39adcce14"
+  }
+}

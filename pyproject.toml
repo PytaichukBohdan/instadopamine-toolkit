@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "instadopamine-dna"
+version = "0.1.0"
+description = "Evidence-first Instagram creator research, media analysis and private reports"
+requires-python = ">=3.11"
+dependencies = ["requests>=2.32,<3", "Pillow>=10,<13", "markdown>=3.7,<4", "bleach>=6,<7"]
+
+[project.optional-dependencies]
+local-asr = ["faster-whisper>=1.1,<2"]
+
+[project.scripts]
+instadna = "instadna.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["instadna*"]
+
+[tool.setuptools.package-data]
+instadna = ["web/*"]

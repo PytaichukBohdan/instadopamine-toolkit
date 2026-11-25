@@ -1,0 +1,21 @@
+.venv/
+__pycache__/
+*.pyc
+.env*
+data/
+output/
+dist/
+.wrangler/
+*.egg-info/
+node_modules/
+# Person data stays private. Remove these lines only in a private fork.
+wiki/
+recipes/
+toolkits/people/*
+!toolkits/people/_template/
+toolkits/work
+toolkits/video-dna/*/corpus/
+toolkits/video-dna/cast/
+toolkits/video-dna/productions/
+video/projects/
+video/out/

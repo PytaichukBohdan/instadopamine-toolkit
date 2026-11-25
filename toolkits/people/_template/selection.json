@@ -1,0 +1,15 @@
+{
+ "version": "v1",
+ "date": "DD Month YYYY",
+ "hero": "id-portrait-v1.png",
+ "summary": "A photorealistic reference set built from N face photos and an M-second full-body video, so any later image or video keeps the same face, hair, build and marks. All clothing is a neutral baseline (plain white tee, plain black trousers).",
+ "sections": [
+  {"id": "anchors", "nav": "Anchors", "title": "Identity anchors", "lede": "Single full-frame images to attach first in any new generation.", "items": []},
+  {"id": "head", "nav": "Head & face", "title": "Head, face and marks", "lede": "Every angle of the head, real expressions, speaking frames and close-up details.", "items": []},
+  {"id": "body", "nav": "Body", "title": "Body turnarounds", "lede": "Five-column sheets in neutral baseline clothing.", "items": []},
+  {"id": "context", "nav": "In context", "title": "In-context test", "lede": "A check that the passport survives outside the studio.", "items": []}
+ ],
+ "pending": [],
+ "method": [],
+ "limits": []
+}

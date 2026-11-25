@@ -1,0 +1,6 @@
+interface:
+  display_name: "Voice Clone DNA"
+  short_description: "Clone voices with prosody and gentle postprocessing"
+  default_prompt: "Use $voice-clone-dna to reproduce the speaker's characteristic delivery and create natural speech using the owner's approved workflow."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,71 @@
+# Production file — the single source for Stage 2 (preview) and Stage 3 (generation).
+# tools/assemble_prompts.py writes prompts/<id>.txt; tools/build_preview.py renders site/;
+# tools/cut_from_production.py cuts renders/<slug>-v<version>.mp4 from clips/<shot>.mp4.
+slug: my-film
+title: "My film"
+version: 1
+date: "2026-10-10"
+style:                    # REQUIRED: style id from ../../STYLES.md. If none was named, ask.
+dna: ""                   # display name, e.g. "<Creator>'s approach (@handle)"
+format: slice-of-life            # one of ../<style>/formats.md
+logline: "One sentence the owner would tell a friend."
+trick: "One sentence: the technique the whole film is built around."
+input:
+  idea: "Owner's words verbatim."
+  references: []                 # - {what: "...", file: refs/x.jpg, take: "...", do_not_take: "..."}
+delivery: {aspect: "4:3", fps: 24, length_s: 30, platform: "Instagram Reels"}
+music:
+  title: "Track — Artist"
+  file: refs/music.mp3           # laid in the edit
+  offset: 0
+  bpm: 92
+  edit_mode: phrase-cut          # phrase-cut | beat-cut
+  sections: []                   # - {start: 0, end: 8, label: "intro"}
+  notes: ""
+cast: [lead]                   # ../cast/<name>.md
+wardrobe: "One line, identical in every frame."
+global_blocks: [GRADE-LOCK, NO-FREEZING, STOP-BASE]
+story:
+  - "Paragraph 1."
+assets:                          # image generations: character sheet in costume, plates, props
+  - id: sheet
+    kind: character-sheet
+    title: "Lead — costume sheet"
+    model: seedream_v5_pro
+    identity_tag: "@face"
+    cast: [lead]
+    description: "Character sheet, three panels on a neutral mid-grey backdrop: ..."
+    lens: "85mm portrait look for the close-ups"
+    image: frames/sheet.png      # filled once generated
+    use: "Every shot references this sheet."
+shots:
+  - id: s01
+    start: 0.0
+    end: 3.2
+    title: "Opening image"
+    summary: "What the viewer sees."
+    model: seedance_2_5
+    duration: 6
+    context: "One sentence: the trick as it applies to this shot."
+    references:
+      - {tag: "@face", what: "the lead's passport portrait", take: "face only", do_not_take: "clothing, light, background"}
+      - {tag: "@sheet", what: "costume sheet", take: "face, hair, wardrobe"}
+    main: ["..."]
+    fail: ["..."]
+    layout: "near → far"
+    beats:                         # [t0, t1, "what happens"] inside the generated clip
+      - [0.0, 2.0, "..."]
+    acting: {scene_direction: "...", motive: "...", goal: "...", obstacle: "...", tactic: "..."}
+    camera: "One move, one sentence."
+    lens: "50mm, T2"
+    lighting: "Key / fill / rim, motivated by a real source."
+    blocks: [CAM-LIVING-TRIPOD, OPT-NORMAL, GRADE-BRIGHT]
+    sound: "Diegetic only, layered near / mid / far. No music, no speech."
+    inversions: ["..."]            # STOP-INVERSION: ways the trick could be reversed
+    transition_out: "hard cut on the downbeat"
+    frame: frames/s01.png
+generation:
+  budget: "Draft every shot at 480p, upscale the winners."
+  steps:
+    - {what: "Costume sheet", model: "seedream_v5_pro 2k", notes: "..."}
+feedback: []                     # - {version: 1, date: "...", owner: "verbatim", change: "what we changed"}

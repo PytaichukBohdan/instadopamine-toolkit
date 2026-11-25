@@ -1,0 +1,13 @@
+[
+ {"id": "id-portrait", "prompt": "id-portrait", "refs": ["face_front", "face_angles", "face_34_right", "face_34_left"]},
+ {"id": "headshot-34", "prompt": "headshot-34", "refs": ["face_front", "face_angles", "face_34_right", "face_34_left"]},
+ {"id": "head-rotation", "prompt": "head-rotation", "refs": ["face_profile_left", "face_34_left", "face_front", "face_34_right", "face_profile_right"]},
+ {"id": "head-back", "prompt": "head-back", "refs": ["face_front", "face_back34", "body_back", "face_profile_left", "face_profile_right"]},
+ {"id": "fullbody-front", "prompt": "fullbody-front", "refs": ["face_front", "face_angles", "body_front", "body_turn"]},
+ {"id": "sheet-baseline", "prompt": "sheet-baseline", "refs": ["face_front", "face_angles", "body_turn", "body_front"]},
+ {"id": "sheet-body", "prompt": "sheet-body", "refs": ["passport_portrait", "body_turn", "body_back", "body_front"]},
+ {"id": "expressions", "prompt": "expressions", "refs": ["passport_portrait", "emo_core", "emo_speaking", "face_front"]},
+ {"id": "speaking", "prompt": "speaking", "refs": ["passport_portrait", "emo_speaking", "emo_core", "face_front"]},
+ {"id": "details", "prompt": "details", "refs": ["face_front", "body_back", "body_turn"]},
+ {"id": "scene-street", "prompt": "scene-street", "refs": ["face_front", "face_angles", "body_front"]}
+]

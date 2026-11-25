@@ -1,0 +1,8 @@
+{
+  "schema": "instadna.skill-bundle/v1",
+  "name": "person-passport",
+  "files": {
+    "SKILL.md": "19764cdaa8c0f574b27877bfe9e2a18abea0ffe173d49fabc42642519f4c62a6",
+    "agents/openai.yaml": "13b7ae54dea196d56a48d7b95be4c4bd25374762f2d074f75a3b50debfb2fd5b"
+  }
+}

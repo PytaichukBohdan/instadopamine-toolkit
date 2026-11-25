@@ -1,0 +1,5 @@
+productions/*/site/
+productions/*/clips/
+productions/*/renders/
+tools/node_modules/
+__pycache__/

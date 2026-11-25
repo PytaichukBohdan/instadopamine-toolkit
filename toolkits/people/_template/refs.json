@@ -1,0 +1,15 @@
+{
+ "face_front": "frontal face photo, neutral expression - IDENTITY",
+ "face_34_right": "three-quarter view, nose pointing toward image-right - IDENTITY",
+ "face_34_left": "three-quarter view, nose pointing toward image-left - IDENTITY",
+ "face_profile_right": "near-profile, nose pointing at image-right - IDENTITY: nose bridge, jaw, ear",
+ "face_profile_left": "near-profile, nose pointing at image-left - IDENTITY: nose profile, chin",
+ "face_back34": "back-three-quarter view showing hair length and how it falls",
+ "face_angles": "board of several real photos of the head from different angles - IDENTITY from all angles",
+ "body_front": "full-body video frame, front view - BODY proportions and posture only (ignore clothing)",
+ "body_back": "full-body video frame, back view - BODY and any back/arm marks",
+ "body_turn": "strip of full-body video frames: front, right side, left side, back - BODY proportions and marks only (ignore clothing)",
+ "emo_core": "board of six REAL frames from the person's emotion video, labelled in the prompt by what each face shows",
+ "emo_speaking": "board of six REAL frames of the person talking to camera",
+ "passport_portrait": "the APPROVED generated passport portrait - target look (hair, white T-shirt, studio light) and identity"
+}

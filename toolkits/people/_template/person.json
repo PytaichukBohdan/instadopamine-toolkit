@@ -1,0 +1,11 @@
+{
+ "name": "Firstname",
+ "slug": "firstname",
+ "entity_id": "person:firstname-lastname",
+ "pronouns": {"he": "they", "his": "their", "him": "them", "He": "They", "His": "Their", "HIS": "THEIR", "HE": "THEY", "himself": "themselves"},
+ "pronoun_basis": "default they/them until the person's own pronouns are stated",
+ "inputs": "data/Firstname/live_references",
+ "refpack": "work/firstname/refpack",
+ "output": "data/Firstname/passport",
+ "publish": {"pages_project": "<your-pages-project>", "branch": "firstname-passport"}
+}
